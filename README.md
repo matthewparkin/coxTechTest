@@ -1,75 +1,60 @@
-# React + TypeScript + Vite
+# Technical Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Senior Software Engineer, Frontend
 
-Currently, two official plugins are available:
+### Goal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Implement features for a Vehicle Inventory and Finance Calculator.
 
-## Expanding the ESLint configuration
+### Scenario
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Tasked with building a Vehicle listing and Finance Details view feature for an automotive finance web application. The application needs to display a list of retailers' available vehicles, allow users to filter and sort these vehicles, and then view the details of a single vehicle along with a representative finance calculation on a separate page.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Notes
+I was running out of time so I haven't been able to add unit tests.  
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js: Ensure you have Node.js version 22 or higher installed.
+
+## Installation
+
+### Clone the repository
+
+```
+git clone git@github.com:matthewparkin/coxTechTest.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+cd coxTechTest
 ```
 
-## Using Node Version Manager (nvm)
+### Using Node Version Manager (nvm)
 
 ```bash
 nvm install && nvm use
+```
+
+### Install dependencies
+
+```
+yarn
+```
+
+## Scripts
+
+### Development server
+
+Start the development server:
+
+```
+yarn dev
+```
+
+### Lint (ESLint)
+
+Check for linting issues:
+
+```
+yarn lint
 ```
