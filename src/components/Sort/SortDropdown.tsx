@@ -3,11 +3,12 @@ interface SortDropdownProps {
     setSortOption: (value: string) => void;
 }
 
-const SortDropdown = ({ sortOption, setSortOption }: SortDropdownProps) => {
+const Sort = ({ sortOption, setSortOption }: SortDropdownProps) => {
     return (
         <select
+            id="sort"
             value={sortOption}
-            onChange={(e) => setSortOption(e.target.value)}
+            onChange={(event) => setSortOption(event.target.value)}
         >
             <option value="">Sort By</option>
             <option value="price-asc">Price (Low to High)</option>
@@ -20,4 +21,4 @@ const SortDropdown = ({ sortOption, setSortOption }: SortDropdownProps) => {
     );
 };
 
-export default SortDropdown;
+export default Sort;

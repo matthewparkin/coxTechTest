@@ -3,9 +3,10 @@ interface SearchInputProps {
     setSearch: (value: string) => void;
 }
 
-const SearchInput = ({ search, setSearch }: SearchInputProps) => {
+const Search = ({ search, setSearch }: SearchInputProps) => {
     return (
         <input
+            id="search"
             type="text"
             placeholder="Search vehicles..."
             value={search}
@@ -14,4 +15,4 @@ const SearchInput = ({ search, setSearch }: SearchInputProps) => {
     );
 };
 
-export default SearchInput;
+export default Search;
