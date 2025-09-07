@@ -1,8 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import VehicleListPage from "./pages/VehicleListPage";
-import VehicleDetailsPage from "./pages/VehicleDetailsPage";
-import "./App.css";
+import VehicleListPage from "./pages/VehicleList";
+import VehicleDetailsPage from "./pages/VehicleDetails";
 
 const App: React.FC = () => {
     return (

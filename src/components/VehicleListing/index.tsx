@@ -1,10 +1,10 @@
 import { useEffect, useState, useMemo } from "react";
-import SearchInput from "./SearchInput";
-import SortDropdown from "./SortDropdown";
-import VehicleListDisplay from "./VehicleListDisplay";
-import type { Vehicle } from "../types";
+import type { Vehicle } from "../../types";
+import Sort from "../Sort/SortDropdown";
+import Search from "../Search";
+import VehicleDisplay from "../VehicleDisplay";
 
-const VehicleList = () => {
+const VehicleListing = () => {
     const [vehicles, setVehicles] = useState<Vehicle[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -90,12 +90,11 @@ const VehicleList = () => {
 
     return (
         <div>
-            <h1>Vehicle List</h1>
-            <SearchInput search={search} setSearch={setSearch} />
-            <SortDropdown sortOption={sortOption} setSortOption={setSortOption} />
-            <VehicleListDisplay vehicles={filteredVehicles} />
+            <Search search={search} setSearch={setSearch} />
+            <Sort sortOption={sortOption} setSortOption={setSortOption} />
+            <VehicleDisplay vehicles={filteredVehicles} />
         </div>
     );
 };
 
-export default VehicleList;
+export default VehicleListing;

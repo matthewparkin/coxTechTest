@@ -1,0 +1,24 @@
+@use "../../utils/variables" as *;
+
+.vehicle-list-page {
+    padding: 1rem;
+    min-height: 100vh;
+
+    .page-header {
+        margin-bottom: 2rem;
+
+        h1 {
+            font-size: 2rem;
+            color: $color-primary;
+        }
+    }
+
+    .vehicle-list-container {
+        display: flex;
+        min-height: 30rem;
+        background: white;
+        padding: 3rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px #00000022;
+    }
+}
